@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boba Group Deals</title>
+  <title>PickYourPrice – Boba Deals in SF Bay Area</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[Your-GA-ID]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[Your-GA-ID]');
+  </script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -48,6 +56,18 @@
       border: 2px solid #cbd5e1;
       color: #1e293b;
     }
+    .tracker {
+      margin: 1rem 0;
+      font-size: 1rem;
+      color: #1e293b;
+    }
+    .social-proof {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .social-proof p {
+      margin: 0.5rem 0;
+    }
     section {
       padding: 2rem 1rem;
       max-width: 800px;
@@ -69,61 +89,91 @@
       border-radius: 0.75rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+    .form-container {
+      margin: 1.5rem 0;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.875rem;
       color: #94a3b8;
     }
+    footer a {
+      color: #3b82f6;
+    }
     img.hero {
       display: block;
       max-width: 100%;
       margin: 1.5rem auto 0;
       border-radius: 1rem;
+      loading: lazy;
+    }
+    @media (max-width: 600px) {
+      .features, .benefits {
+        grid-template-columns: 1fr;
+      }
+      header, section {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Love Boba? Pay Less When You Buy Together</h1>
-    <p>Get exclusive discounts by joining group orders — and help your favorite shops thrive.</p>
+    <h1>Set Your Boba Price, Save 20–40% – Join the SF Bay Area Beta!</h1>
+    <p>Only 50 spots left! Set your price, save on boba, and support Bay Area shops.</p>
     <img class="hero" src="https://images.unsplash.com/photo-1589987601481-55a6d3b1d0ef?fit=crop&w=800&q=80" alt="Boba group illustration">
+    <div class="tracker">
+      <strong>142/200 buyers joined – 58 spots left!</strong> | <strong>7/15 shops signed up!</strong>
+    </div>
+    <div class="social-proof">
+      <p><em>“I want $3 matcha in SF! Pumped for PickYourPrice!”</em> – Alex T.</p>
+      <p><em>“Ready for 10 extra orders daily with no fees!”</em> – Boba Guys</p>
+      <p><strong>Shops interested:</strong> Boba Guys, Tea Era, i-Tea</p>
+    </div>
     <div class="cta-buttons">
-      <a href="#" class="buyers-btn">Join the Early Access List</a>
-      <a href="#" class="sellers-btn">List Your Shop (Free Beta)</a>
+      <a href="#buyer-form" class="buyers-btn">Join Waitlist – Priority Access!</a>
+      <a href="#seller-form" class="sellers-btn">Sign Up Free – Get Featured!</a>
     </div>
   </header>
 
   <section>
     <h2>How It Works</h2>
     <div class="features">
-      <div class="feature">💬 Buyers name their price and invite friends</div>
-      <div class="feature">📈 Demand builds up automatically</div>
-      <div class="feature">❤️ Feel good supporting local shops</div>
-      <div class="feature">📱 Easy-to-use system with zero upfront cost</div>
+      <div class="feature">💬 Set your price (e.g., $3 boba) and invite friends</div>
+      <div class="feature">📈 Group orders unlock bigger discounts across the Bay Area</div>
+      <div class="feature">🗳 Vote for your favorite shops (SF, Oakland, San Jose) to join</div>
+      <div class="feature">❤️ Save 20–40% while supporting local shops</div>
     </div>
   </section>
 
   <section>
     <h2>Why Buyers Love It</h2>
     <div class="benefits">
-      <div class="benefit">💰 Save up to 30% on favorite drinks</div>
-      <div class="benefit">⏱ Skip long lines with pre-order pickup</div>
-      <div class="benefit">🏪 Support your favorite boba shops</div>
+      <div class="benefit">💰 Save 20–40% on boba by setting your price</div>
+      <div class="benefit">⏱ Pre-order for quick pickup in SF, Oakland, San Jose</div>
+      <div class="benefit">🏪 Support Bay Area shops you love</div>
+    </div>
+    <div class="form-container" id="buyer-form">
+      <iframe src="[Google Form Buyer URL]" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
   </section>
 
   <section>
     <h2>Why Sellers Win</h2>
     <div class="benefits">
-      <div class="benefit">📦 Get guaranteed bulk orders before peak times</div>
-      <div class="benefit">🕒 Fill off-peak hours with group demand</div>
-      <div class="benefit">⚙️ Easy-to-use system, zero upfront cost</div>
+      <div class="benefit">📦 Get 10–15% more orders during off-peak hours</div>
+      <div class="benefit">📊 See real-time demand (e.g., 50 buyers at $3)</div>
+      <div class="benefit">💸 Save 15–20% vs. delivery apps, no fees</div>
+    </div>
+    <div class="form-container" id="seller-form">
+      <iframe src="[Google Form Seller URL]" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 GroupBoba. All rights reserved.
+    <p>© 2025 PickYourPrice. All rights reserved.</p>
+    <p>Follow us on <a href="https://instagram.com/pickyourprice">Instagram</a> for Bay Area updates!</p>
   </footer>
 </body>
 </html>
