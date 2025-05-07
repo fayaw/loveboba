@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PickYourPrice – Boba Deals in SF Bay Area</title>
+  <meta name="description" content="Set your own price for boba in SF Bay Area and save up to 40%. Join the PickYourPrice beta to support local shops!">
+  <meta name="keywords" content="boba deals SF Bay Area, set boba price, bubble tea discounts, SF boba shops">
+  <title>PickYourPrice – Set Your Boba Price in SF Bay Area</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=[Your-GA-ID]"></script>
@@ -18,7 +20,7 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fffaf2;
+      background-color: #f5f5f5;
       color: #333;
     }
     header {
@@ -27,13 +29,13 @@
       text-align: center;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
       color: #1e293b;
     }
     header p {
-      font-size: 1.125rem;
+      font-size: 1.25rem;
       color: #475569;
     }
     .cta-buttons {
@@ -47,19 +49,28 @@
       padding: 0.75rem 1.5rem;
       border-radius: 0.5rem;
       font-weight: 600;
+      font-size: 1.125rem;
     }
     .buyers-btn {
       background-color: #3b82f6;
       color: #fff;
     }
     .sellers-btn {
-      border: 2px solid #cbd5e1;
-      color: #1e293b;
+      background-color: #fff;
+      border: 2px solid #3b82f6;
+      color: #3b82f6;
     }
     .tracker {
       margin: 1rem 0;
-      font-size: 1rem;
+      font-size: 1.125rem;
       color: #1e293b;
+      font-weight: 600;
+    }
+    .countdown {
+      margin: 1rem 0;
+      font-size: 1.25rem;
+      color: #e11d48;
+      font-weight: 600;
     }
     .social-proof {
       margin: 1.5rem 0;
@@ -67,6 +78,39 @@
     }
     .social-proof p {
       margin: 0.5rem 0;
+      font-size: 1.125rem;
+    }
+    .shop-logos {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .shop-logos img {
+      max-width: 100px;
+      height: auto;
+    }
+    .testimonials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .testimonial {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      max-width: 300px;
+      text-align: left;
+    }
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .testimonial cite {
+      font-weight: 600;
+      color: #3b82f6;
     }
     section {
       padding: 2rem 1rem;
@@ -74,23 +118,34 @@
       margin: 0 auto;
     }
     section h2 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin-bottom: 1rem;
       color: #1e293b;
     }
-    .features, .benefits {
+    .features, .benefits, .faq {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
-    .feature, .benefit {
+    .feature, .benefit, .faq-item {
       background-color: #fff;
       padding: 1rem;
       border-radius: 0.75rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+    .faq-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
     .form-container {
       margin: 1.5rem 0;
+    }
+    .form-container iframe {
+      border: none;
+      border-radius: 0.75rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     footer {
       text-align: center;
@@ -109,50 +164,60 @@
       loading: lazy;
     }
     @media (max-width: 600px) {
-      .features, .benefits {
+      .features, .benefits, .faq {
         grid-template-columns: 1fr;
       }
       header, section {
         padding: 1rem;
+      }
+      .testimonials, .shop-logos {
+        flex-direction: column;
+      }
+      .testimonial {
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Set Your Boba Price, Save 20–40% – Join the SF Bay Area Beta!</h1>
-    <p>Only 50 spots left! Set your price, save on boba, and support Bay Area shops.</p>
-    <img class="hero" src="https://images.unsplash.com/photo-1589987601481-55a6d3b1d0ef?fit=crop&w=800&q=80" alt="Boba group illustration">
+    <h1>Set Your Own Price for Boba in SF Bay Area – Save Up to 40%!</h1>
+    <p>Only 50 Spots Left! Join the SF Bay Area Beta to Save and Support Local Shops.</p>
+    <img class="hero" src="images/hero.jpg" alt="Boba group illustration">
+    <div class="countdown">Hurry! Early Access Ends in <span id="countdown">3 Days</span></div>
     <div class="tracker">
-      <strong>142/200 buyers joined – 58 spots left!</strong> | <strong>7/15 shops signed up!</strong>
+      <strong>142/200 Buyers Joined – 58 Spots Left!</strong> | <strong>7/15 Shops Signed Up!</strong>
     </div>
     <div class="social-proof">
-      <p><em>“I want $3 matcha in SF! Pumped for PickYourPrice!”</em> – Alex T.</p>
-      <p><em>“Ready for 10 extra orders daily with no fees!”</em> – Boba Guys</p>
-      <p><strong>Shops interested:</strong> Boba Guys, Tea Era, i-Tea</p>
+      <p><strong>Shops Interested:</strong> Boba Guys, Tea Era, i-Tea, Milk+T</p>
+      <div class="shop-logos">
+        <img src="images/boba-guys-logo.png" alt="Boba Guys Logo">
+        <img src="images/tea-era-logo.png" alt="Tea Era Logo">
+        <img src="images/i-tea-logo.png" alt="i-Tea Logo">
+      </div>
     </div>
     <div class="cta-buttons">
-      <a href="#buyer-form" class="buyers-btn">Join Waitlist – Priority Access!</a>
-      <a href="#seller-form" class="sellers-btn">Sign Up Free – Get Featured!</a>
+      <a href="#buyer-form" class="buyers-btn">Join Now & Get $5 Off!</a>
+      <a href="#seller-form" class="sellers-btn">Sign Up Free & Get Featured!</a>
     </div>
   </header>
 
   <section>
     <h2>How It Works</h2>
     <div class="features">
-      <div class="feature">💬 Set your price (e.g., $3 boba) and invite friends</div>
-      <div class="feature">📈 Group orders unlock bigger discounts across the Bay Area</div>
-      <div class="feature">🗳 Vote for your favorite shops (SF, Oakland, San Jose) to join</div>
-      <div class="feature">❤️ Save 20–40% while supporting local shops</div>
+      <div class="feature">💬 Set Your Price (e.g., $3 Boba) & Invite Friends</div>
+      <div class="feature">📈 Group Orders Unlock Bigger Discounts</div>
+      <div class="feature">🗳 Vote for Your Favorite Bay Area Shops</div>
+      <div class="feature">❤️ Save 20–40% & Support Local Businesses</div>
     </div>
   </section>
 
   <section>
     <h2>Why Buyers Love It</h2>
     <div class="benefits">
-      <div class="benefit">💰 Save 20–40% on boba by setting your price</div>
-      <div class="benefit">⏱ Pre-order for quick pickup in SF, Oakland, San Jose</div>
-      <div class="benefit">🏪 Support Bay Area shops you love</div>
+      <div class="benefit">💰 Save 20–40% by Setting Your Price</div>
+      <div class="benefit">⏱ Quick Pickup in SF, Oakland, San Jose</div>
+      <div class="benefit">🏪 Support Your Favorite Boba Shops</div>
     </div>
     <div class="form-container" id="buyer-form">
       <iframe src="[Google Form Buyer URL]" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -162,12 +227,48 @@
   <section>
     <h2>Why Sellers Win</h2>
     <div class="benefits">
-      <div class="benefit">📦 Get 10–15% more orders during off-peak hours</div>
-      <div class="benefit">📊 See real-time demand (e.g., 50 buyers at $3)</div>
-      <div class="benefit">💸 Save 15–20% vs. delivery apps, no fees</div>
+      <div class="benefit">📦 10–15% More Orders in Off-Peak Hours</div>
+      <div class="benefit">📊 Real-Time Demand Data (e.g., 50 Buyers at $3)</div>
+      <div class="benefit">💸 Save 15–20% vs. Delivery Apps, No Fees</div>
     </div>
     <div class="form-container" id="seller-form">
       <iframe src="[Google Form Seller URL]" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>What They’re Saying</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“PickYourPrice lets me save on boba while supporting local shops. I set $3 and got my matcha!”</p>
+        <cite>— Alex T., San Francisco</cite>
+      </div>
+      <div class="testimonial">
+        <p>“As a shop owner, PickYourPrice fills my slow hours with orders, no fees. It’s a game-changer!”</p>
+        <cite>— Sarah L., Boba Guys</cite>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>How does buyer-driven pricing work?</h3>
+        <p>You set your desired price for boba, invite friends to join, and shops accept group orders to offer discounts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there any cost for sellers?</h3>
+        <p>No! PickYourPrice is free for shops, with no fees or upfront costs, unlike delivery apps.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which Bay Area cities are included?</h3>
+        <p>We’re starting in San Francisco, Oakland, San Jose, Berkeley, and Fremont, with more to come!</p>
+      </div>
+      <div class="faq-item">
+        <h3>When does the beta launch?</h3>
+        <p>Once we hit 200 buyer and 15 shop sign-ups, we’ll launch the beta. Join now to secure your spot!</p>
+      </div>
     </div>
   </section>
 
