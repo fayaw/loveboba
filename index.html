@@ -3,69 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Submit your item and price to match with local sellers. Join our beta in Foster City!" />
   <title>Buyer Driven MVP</title>
   <style>
-    body {
-      font-family: sans-serif;
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #e74c3c;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
     }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
     header, section, footer {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
     }
+
     header {
       text-align: center;
+      background: linear-gradient(to bottom, #fff, var(--background-color));
     }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
     }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #333;
+      padding Whistleblower: 0.75rem 1.5rem;
+      background-color: var(--primary-color);
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
+    .btn:hover {
+      background-color: #34495e;
+      transform: translateY(-2px);
+    }
+
     .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+      display: grid;
+      gap: 1.5rem;
     }
+
     .step {
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
     }
+
+    .step:hover {
+      transform: translateY(-5px);
+    }
+
     .step h3 {
-      margin-top: 0;
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
     }
+
     .boba-image {
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
+      border-radius: 12px;
+      margin: 1.5rem auto;
       display: block;
-      margin: 20px auto;
-      border-radius: 10px;
+      box-shadow: var(--shadow);
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li::before {
+      content: '✔';
+      color: var(--accent-color);
+      position: absolute;
+      left: 0;
+    }
+
+    .warning {
+      color: var(--accent-color);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     footer {
-      font-size: 0.9rem;
       text-align: center;
-      color: #777;
+      font-size: 0.95rem;
+      color: #666;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid #eee;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+      }
+
+      header, section, footer {
+        padding: 2rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .boba-image {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Tell Us What You Want. Set Your Price.</h1>
-    <p>Submit your item and price — we’ll empower your request by grouping it with others and matching it with local sellers. You only pay if it’s accepted.</p>
-    <img class="boba-image" src="boba_imag.jpg" alt="Boba Drink" />
+    <p>Submit your item and price — we’ll match it with local sellers. Pay only if your request is accepted.</p>
+    <img class="boba-image" src="boba_imag.jpg" alt="Refreshing Boba Drink" />
     <a class="btn" href="#form">Make a Request</a>
   </header>
 
@@ -74,15 +194,15 @@
     <div class="steps">
       <div class="step">
         <h3>1. Submit a Request</h3>
-        <p>Pick your product, price, and pickup zone.</p>
+        <p>Choose your product, set your price, and select a pickup store.</p>
       </div>
       <div class="step">
         <h3>2. We Group & Match Requests</h3>
-        <p>When enough people want the same thing, sellers can accept.</p>
+        <p>When enough people request the same item, sellers can accept the deal.</p>
       </div>
       <div class="step">
-        <h3>3. Pick It Up and Pay</h3>
-        <p>You’ll only go if it’s matched. Pay the seller directly at pickup.</p>
+        <h3>3. Pick Up and Pay</h3>
+        <p>Get notified if your request is matched. Pay the seller directly at pickup.</p>
       </div>
     </div>
   </section>
@@ -90,23 +210,22 @@
   <section>
     <h2>Why Try This?</h2>
     <ul>
-      <li>Save money through group buying</li>
-      <li>Avoid long lines and out-of-stock frustration</li>
-      <li>Help local sellers plan smarter</li>
-      <li>No prepayment, just convenience</li>
+      <li>Save money through group buying power</li>
+      <li>Skip long lines and stock shortages</li>
+      <li>Support local sellers with smarter planning</li>
+      <li>No prepayment, just seamless convenience</li>
     </ul>
   </section>
 
-  <section id="form">    
-    <p style="color: #c00; font-weight: bold;">⚠️ Please commit to your offer. Once matched, you'll be expected to pick up and pay at the location you choose.</p>
+  <section id="form">
+    <p class="warning">⚠️ Commit to your offer. If matched, pick up and pay at your chosen location.</p>
     <h2>Join the Beta</h2>
-    <p>We’re testing now in the SF Bay Area — starting with boba and local vendors. Sign up and help shape something new.</p>
-    <a class="btn" href="https://forms.gle/8KcvBsepX2pcVbYx6" target="_blank">Make a Request</a>
+    <p>We’re testing in Foster City, starting with boba. Sign up to shape the future of buyer-driven shopping.</p>
+    <a class="btn" href="https://forms.gle/8KcvBsepX2pcVbYx6" target="_blank" rel="noopener">Make a Request</a>
   </section>
 
   <footer>
-    <p>Built with 💛 in the Bay Area | Contact: youremail@example.com</p>
+    <p>Built with 💛 in the Bay Area | Contact: <a href="mailto:xxx@mvp.com">xxx@mvp.com</a></p>
   </footer>
-
 </body>
 </html>
