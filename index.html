@@ -1,14 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="generator" content="Hostinger Horizons" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hostinger Horizons</title>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.jsx"></script>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Group Buying MVP</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header, section, footer {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .step {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .step h3 {
+      margin-top: 0;
+    }
+    .boba-image {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+    footer {
+      font-size: 0.9rem;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tell Us What You Want. Set Your Price.</h1>
+    <p>Submit your item and price — we’ll empower your request by grouping it with others and matching it with local sellers. You only pay if it’s accepted.</p>
+    <img class="boba-image" src="link" alt="Boba Drink" />
+    <a class="btn" href="#form">Make a Request</a>
+  </header>
+
+  <section>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Submit a Request</h3>
+        <p>Pick your product, price, and pickup zone.</p>
+      </div>
+      <div class="step">
+        <h3>2. We Group & Match Requests</h3>
+        <p>When enough people want the same thing, sellers can accept.</p>
+      </div>
+      <div class="step">
+        <h3>3. Pick It Up and Pay</h3>
+        <p>You’ll only go if it’s matched. Pay the seller directly at pickup.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Try This?</h2>
+    <ul>
+      <li>Save money through group buying</li>
+      <li>Avoid long lines and out-of-stock frustration</li>
+      <li>Help local sellers plan smarter</li>
+      <li>No prepayment, just convenience</li>
+    </ul>
+  </section>
+
+  <section id="form">
+    <h2>Join the Beta</h2>
+    <p>We’re testing now in the SF Bay Area — starting with boba and local vendors. Sign up and help shape something new.</p>
+    <a class="btn" href="https://forms.gle/8KcvBsepX2pcVbYx6" target="_blank">Make a Request</a>
+  </section>
+
+  <footer>
+    <p>Built with 💛 in the Bay Area | Contact: youremail@example.com</p>
+  </footer>
+
+</body>
 </html>
